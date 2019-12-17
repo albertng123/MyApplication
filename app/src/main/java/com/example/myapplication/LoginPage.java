@@ -28,5 +28,14 @@ public class LoginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        forgotPass = findViewById(R.id.forgotPass);
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginPage.this, ForgotPass.class);
+
+                startActivity(intent);
+            }
+        });
     }
 }
