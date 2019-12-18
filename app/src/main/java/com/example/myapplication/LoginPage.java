@@ -150,8 +150,8 @@ public class LoginPage extends AppCompatActivity {
                                 Toast.makeText(LoginPage.this, "AAAAAAAA" + inNew.toString(), Toast.LENGTH_LONG).show();
                                 Log.d(TAG, "signInWithEmail:success");
                                 // Go to CurrentLocation
-                                //Intent intent = new Intent(LoginPage.this, .class);
-                                //startActivity(intent);
+                                Intent intent = new Intent(LoginPage.this,  MainApp.class);
+                                startActivity(intent);
                                 finish();
                             }
                         }
