@@ -59,6 +59,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="RESET PASSWORD"
+        android:onClick="resetPassword"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
