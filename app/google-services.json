@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "635558989600",
+    "firebase_url": "https://paktani-6957d.firebaseio.com",
+    "project_id": "paktani-6957d",
+    "storage_bucket": "paktani-6957d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635558989600:android:6bf398594574f36cbc5145",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635558989600-9475rql7jqah3n0mea2p5j5uttq30gk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoaqOvIA2c3RWFDprovOYRAsRMnM6KL3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635558989600-9475rql7jqah3n0mea2p5j5uttq30gk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
