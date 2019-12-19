@@ -12,7 +12,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Number of Hectares"
+            android:hint="Field Area (ha)"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="25dp"
 
@@ -34,7 +34,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
             android:layout_marginTop="25dp"
-            android:hint="Distance of Planting @ hectares"
+            android:hint="Plant Spaceing"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
