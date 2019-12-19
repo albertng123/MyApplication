@@ -34,12 +34,11 @@ public class CreateAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
-
         userEmail = findViewById(R.id.user_email);
         userPassword1 = findViewById(R.id.user_pass);
         userPassword2 = findViewById(R.id.user_passConfirm);
-        progressBar = findViewById(R.id.progressBar3);
-
+        progressBar = findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.GONE);
         mAuth = FirebaseAuth.getInstance();
     }
 

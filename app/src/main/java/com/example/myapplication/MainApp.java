@@ -4,16 +4,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 public class MainApp extends AppCompatActivity {
 
@@ -45,11 +39,11 @@ public class MainApp extends AppCompatActivity {
                             selectedFragment = new FragmentCreate();
                             break;
                         case R.id.navigation_update:
-                            selectedFragment = new FragmentCreate();
+                            selectedFragment = new FragmentUpdate();
                             break;
 
                         case R.id.navigation_account:
-                            selectedFragment = new FragmentCreate();
+                            selectedFragment = new FragmentAccount();
                             break;
                     }
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
