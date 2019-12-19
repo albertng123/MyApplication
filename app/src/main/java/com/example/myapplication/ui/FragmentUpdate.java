@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,16 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myapplication.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FragmentCreate.OnFragmentInteractionListener} interface
+ * {@link FragmentUpdate.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FragmentCreate#newInstance} factory method to
+ * Use the {@link FragmentUpdate#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentCreate extends Fragment {
+public class FragmentUpdate extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +32,7 @@ public class FragmentCreate extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public FragmentCreate() {
+    public FragmentUpdate() {
         // Required empty public constructor
     }
 
@@ -41,11 +42,11 @@ public class FragmentCreate extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentCreate.
+     * @return A new instance of fragment FragmentUpdate.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentCreate newInstance(String param1, String param2) {
-        FragmentCreate fragment = new FragmentCreate();
+    public static FragmentUpdate newInstance(String param1, String param2) {
+        FragmentUpdate fragment = new FragmentUpdate();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,10 +64,10 @@ public class FragmentCreate extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup  container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create, container, false);
+        return inflater.inflate(R.layout.fragment_update, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -76,6 +77,22 @@ public class FragmentCreate extends Fragment {
         }
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
 
     /**
      * This interface must be implemented by activities that contain this
