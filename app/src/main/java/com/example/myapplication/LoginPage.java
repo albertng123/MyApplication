@@ -122,7 +122,7 @@ public class LoginPage extends AppCompatActivity {
 
     public void signIn(View view) {
         final Animation shake = AnimationUtils.loadAnimation(LoginPage.this, R.anim.shake);
-        String email = emaill.getText().toString();
+        final String email = emaill.getText().toString();
         String password = passwordd.getText().toString();
 
         if (email.equals("")){
@@ -151,6 +151,7 @@ public class LoginPage extends AppCompatActivity {
                                 Log.d(TAG, "signInWithEmail:success");
                                 // Go to CurrentLocation
                                 Intent intent = new Intent(LoginPage.this,  MainApp.class);
+                                intent.putExtra("email", email.substring(0, email.indexOf('@')));
                                 startActivity(intent);
                                 finish();
                             }

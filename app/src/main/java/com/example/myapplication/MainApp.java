@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 public class MainApp extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    Bundle bundle1, bundle2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,9 @@ public class MainApp extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        bundle1 = getIntent().getExtras();
+        bundle2 = new Bundle();
+        bundle2.putString("email", bundle1.getString("email"));
     }
 
     @Override
@@ -37,13 +41,16 @@ public class MainApp extends AppCompatActivity {
                     switch (menuItem.getItemId()) {
                         case R.id.navigation_create:
                             selectedFragment = new FragmentCreate();
+                            selectedFragment.setArguments(bundle2);
                             break;
                         case R.id.navigation_update:
                             selectedFragment = new FragmentUpdate();
+                            selectedFragment.setArguments(bundle2);
                             break;
 
                         case R.id.navigation_account:
                             selectedFragment = new FragmentAccount();
+                            selectedFragment.setArguments(bundle2);
                             break;
                     }
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
