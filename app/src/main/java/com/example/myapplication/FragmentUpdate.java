@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -195,8 +196,8 @@ public class FragmentUpdate extends Fragment implements View.OnClickListener {
         View dialogView = inflater.inflate(R.layout.custom_dialog, null);
 
         final EditText editText = dialogView.findViewById(R.id.editText);
-        Button ok = dialogView.findViewById(R.id.okButton);
-        Button cancel = dialogView.findViewById(R.id.cancelButton);
+        TextView ok = dialogView.findViewById(R.id.okButton);
+        TextView cancel = dialogView.findViewById(R.id.cancelButton);
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override

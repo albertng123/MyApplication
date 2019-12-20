@@ -147,7 +147,7 @@ public class LoginPage extends AppCompatActivity {
                                 // Sign in success, update UI with the signed-in user's information
                                 Boolean status = mAuth.getCurrentUser().isEmailVerified();
                                 Boolean inNew = task.getResult().getAdditionalUserInfo().isNewUser();
-                                Toast.makeText(LoginPage.this, "AAAAAAAA" + inNew.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginPage.this, "Login Success" , Toast.LENGTH_LONG).show();
                                 Log.d(TAG, "signInWithEmail:success");
                                 // Go to CurrentLocation
                                 Intent intent = new Intent(LoginPage.this,  MainApp.class);

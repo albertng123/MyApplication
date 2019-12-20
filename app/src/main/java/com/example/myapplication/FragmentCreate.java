@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -20,6 +21,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -140,9 +143,9 @@ public class FragmentCreate extends Fragment implements View.OnClickListener {
                     jlhHa, jarakPerHa, jlhPekerja, jlhCangkul, jlhSickle, jlhSprayer,
                     jlhFertilizer, jlhPesticides, jlhSeed, modal);
             database.child(email).child(String.valueOf(model.getId())).setValue(model);
-            Toast.makeText(getContext(), "Data Berhasil Disimpan. Silahkan ke Update", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Data has be Updated", Toast.LENGTH_SHORT).show();
         } catch (Exception ex) {
-            Toast.makeText(getContext(), "Ada data yang Kosong atau tidak berupa angka", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Some thing is wrong", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -152,8 +155,8 @@ public class FragmentCreate extends Fragment implements View.OnClickListener {
         View dialogView = inflater.inflate(R.layout.custom_dialog, null);
 
         final EditText editText = dialogView.findViewById(R.id.editText);
-        Button ok = dialogView.findViewById(R.id.okButton);
-        Button cancel = dialogView.findViewById(R.id.cancelButton);
+        TextView ok = dialogView.findViewById(R.id.okButton);
+        TextView cancel = dialogView.findViewById(R.id.cancelButton);
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
